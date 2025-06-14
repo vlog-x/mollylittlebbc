@@ -10,26 +10,26 @@
       user-select: none;
       -webkit-user-select: none;
     }
-    
+
     html {
       scroll-behavior: smooth;
     }
-    
+
     body {
       background-color: black;
       margin: 0;
       padding: 0;
     }
-    
+
     .app-container {
       display: none;
     }
-    
+
     a {
       color: white;
       text-decoration: none;
     }
-    
+
     .nav-bar {
       width: 100%;
       height: 8vh;
@@ -41,14 +41,14 @@
       display: flex;
       align-items: center;
     }
-    
+
     .nav-title {
       color: white;
       font-size: 4vh;
       font-weight: 800;
       margin-left: 8vw;
     }
-    
+
     #banner-image {
       width: 100%;
       height: 26vh;
@@ -58,7 +58,7 @@
       background-position: center;
       transition: background-image 0.5s ease-in-out; /* Smooth transition between images */
     }
-    
+
     .banner-loader {
       width: 100%;
       height: 26vh;
@@ -68,7 +68,7 @@
       justify-content: center;
       align-items: center;
     }
-    
+
     .loader {
       border: 8px solid #f3f3f3;
       border-top: 8px solid #3498db;
@@ -78,20 +78,20 @@
       animation: spin 1s linear infinite;
       margin: 100px auto;
     }
-    
+
     .profile-container {
       display: flex;
       flex-direction: row;
       padding: 2vh 1vw 0 1vw;
     }
-    
+
     .profile-picture {
       flex: 40%;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    
+
     .profile-picture-img {
       width: 35vw;
       border-radius: 10px;
@@ -105,39 +105,39 @@
       gap: 0.8vh;
       padding-left: 5vw;
     }
-    
+
     .label {
       color: #4285F4;
       font-size: 2.5vh;
       font-weight: 700;
     }
-    
+
     .label-value {
       color: white;
     }
-    
+
     .profile-bio {
       padding: 2vh;
     }
-    
+
     .profile-bio-info {
       color: white;
       font-size: 2vh;
       font-weight: 500;
     }
-    
+
     .latest-video {
       background-color: #34A853;
       display: flex;
       justify-content: center;
     }
-    
+
     .latest-video-title {
       color: white;
       font-size: 5vh;
       font-weight: 800;
     }
-    
+
     .latest-video-banner {
       width: 100%;
       height: 32vh;
@@ -147,7 +147,7 @@
       display: flex;
       flex-direction: column;
     }
-    
+
     .latest-video-label {
       width: fit-content;
       color: black;
@@ -158,7 +158,7 @@
       margin: 3vh 0 0 5vw;
       border-radius: 10px 0 10px 0;
     }
-    
+
     .latest-video-action {
       width: fit-content;
       color: white;
@@ -170,11 +170,11 @@
       margin: 0 0 0 5vw;
       border-radius: 0 0 10px 0;
     }
-    
+
     .watch-now {
       animation: blinker 1s linear infinite;
     }
-    
+
     .popular-video {
       border-top: 0.5vh solid white;
       border-bottom: 0.5vh solid white;
@@ -182,19 +182,19 @@
       justify-content: center;
       margin: 2vh 0 0 0;
     }
-    
+
     .popular-video-title {
       color: white;
       font-size: 5vh;
       font-weight: 800;
     }
-    
+
     .popular-video-container {
       width: 100%;
       display: flex;
       flex-direction: row;
     }
-    
+
     #popular-video-banner {
       width: 80%;
       height: 60vh;
@@ -202,20 +202,20 @@
       background-position: center;
       transition: background-image 0.3s ease-in-out;
     }
-    
+
     .popular-video-action {
       width: 20%;
       border: none;
       background-color: white;
     }
-    
+
     .popular-video-action-label {
       color: black;
       font-size: 4vh;
       font-weight: 800;
       writing-mode: vertical-rl;
     }
-    
+
     .featured-list {
       border-top: 0.5vh solid white;
       border-bottom: 0.5vh solid white;
@@ -223,19 +223,19 @@
       justify-content: center;
       margin: 2vh 0 0 0;
     }
-    
+
     .featured-list-title {
       color: white;
       font-size: 5vh;
       font-weight: 800;
     }
-    
+
     .featured-list-marquee {
       color: white;
       font-size: 2.5vh;
       font-weight: 500;
     }
-    
+
     .featured-list-container {
       width: 100%;
       height: 40vh;
@@ -245,22 +245,22 @@
       align-items: center;
       overflow: auto;
     }
-    
+
     .featured-list-cover {
       display: flex;
       flex-direction: column;
       transition: transform 0.3 ease;
     }
-    
+
     .featured-list-cover:hover {
       transform: scale(1.03);
     }
-    
+
     .featured-list-cover-img {
       width: 44vw;
       height: 33vh;
     }
-    
+
     .featured-list-cover-label {
       width: 44vw;
       color: white;
@@ -271,50 +271,50 @@
       justify-content: center;
       border: 0.2vw solid white;
     }
-    
+
     .all-video-list {
       display: flex;
       justify-content: center;
       margin: 2vh 0 0 0;
     }
-    
+
     .all-video-list-title {
       color: white;
       font-size: 5vh;
       font-weight: 800;
     }
-    
+
     .gradient-span {
       background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(171, 211, 105, 1) 78%, rgba(237, 221, 83, 1) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block;
     }
-    
+
     .all-video-container {
       /*max-height: 85vh;*/
       margin: 1vh 0 1vh 0;
       padding: 0 2vw 0 2vw;
       overflow-y: auto;
     }
-    
+
     .video-cover-card {
       width: 100%;
       height: auto;
       margin-top: 2vh;
     }
-    
+
     .video-cover-card-img {
       width: 100%;
       height: auto;
     }
-    
+
     .video-cover-card-title {
       color: white;
       font-size: 2vh;
       font-weight: 500;
     }
-    
+
     .popup-frame-container {
       position: fixed;
       top: 0;
@@ -324,7 +324,7 @@
       height: 100vh;
       background-color: rgba(0, 0, 0, 0.7);
     }
-    
+
     .video-frame-popup {
       height: 70vh;
       position: fixed;
@@ -339,16 +339,16 @@
       transform: translateY(100%);
       transition: transform 0.4s ease-in-out;
     }
-    
+
     .video-frame-popup:not(.hidden) {
       transform: translateY(0);
     }
-    
+
     .hidden {
       transform: translateY(100%);
       display: none;
     }
-    
+
     .video-frame-close {
       display: flex;
       justify-content: flex-end;
@@ -362,7 +362,7 @@
       font-weight: 800;
       cursor: pointer;
     }
-    
+
     .video-frame-card {
       display: flex;
       flex-direction: column;
@@ -370,42 +370,42 @@
       gap: 2vh;
       padding: 1vh;
     }
-    
+
     .video-frame {
       width: 100%;
       height: auto;
     }
-    
+
     .video-frame-details {
       display: flex;
       flex-direction: column;
       gap: 3vh;
     }
-    
+
     .video-frame-details-title {
       color: white;
       font-size: 3vh;
       font-weight: 700;
     }
-    
+
     .video-frame-details-duration {
       color: #4285F4;
       font-size: 3vh;
       font-weight: 700;
     }
-    
+
     .video-frame-details-time {
       color: #34A853;
       font-size: 3vh;
       font-weight: 700;
     }
-    
+
     .video-frame-details-info {
       color: white;
       font-size: 2vh;
       font-weight: 500;
     }
-    
+
     .video-btn-container {
       display: flex;
       flex-direction: row;
@@ -413,7 +413,7 @@
       gap: 2vh;
       margin: 2vh 0 2vh 0;
     }
-    
+
     .button-29 {
       align-items: center;
       appearance: none;
@@ -447,7 +447,7 @@
     .button-29:focus {
       box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
     }
-    
+
     .button-29:hover {
       box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
       transform: translateY(-2px);
@@ -457,7 +457,7 @@
        box-shadow: #3c4fe0 0 3px 7px inset;
        transform: translateY(2px);
     }
-    
+
     .warning-container {
       width: 100vw;
       height: 100vh;
@@ -467,7 +467,7 @@
       align-items: center;
       background-color: rgba(0, 0, 0, 0.6);
     }
-    
+
     .warning-card {
       width: 90vw;
       height: 55vh;
@@ -475,27 +475,27 @@
       padding-top: 5vh;
       border: 1px solid white;
     }
-    
+
     .warning-content {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
-    
+
     .warning-title {
       color: white;
       font-size: 3vh;
       font-weight: 700;
     }
-    
+
     .warning-text {
       color: white;
       padding: 6vh 10vw 0 10vw;
       font-size: 2vh;
       line-break: 2px;
     }
-    
+
     .warning-browser {
       color: red;
       padding-left: 10vw;
@@ -503,13 +503,13 @@
       display: flex;
       align-items: center;
     }
-    
+
     .warning-note, .warning-date {
       color: gray;
       font-size: 1.5vh;
       padding: 1.5vh;
     }
-    
+
     .warning-btn-container {
       width: 90vw;
       height: 5vh;
@@ -520,7 +520,7 @@
       justify-content: space-evenly;
       border: 0px solid white;
     }
-    
+
     .button-38 {
       background-color: #FFFFFF;
       border: 0;
@@ -545,7 +545,7 @@
     .button-38:hover {
       background-color: rgb(249,250,251);
     }
-    
+
     .button-38:focus {
       outline: 2px solid transparent;
       outline-offset: 2px;
@@ -554,7 +554,7 @@
     .button-38:focus-visible {
       box-shadow: none;
     }
-    
+
     footer {
       display: flex;
       flex-direction: column;
@@ -563,12 +563,12 @@
       gap: 2vh;
       padding: 2vh;
     }
-    
+
     footer > span {
       color: gray;
       font-size: 1.5vh;
     }
-    
+
     @keyframes spin {
       0% {
         transform: rotate(0deg);
@@ -577,13 +577,13 @@
         transform: rotate(360deg);
       }
     }
-    
+
     @keyframes blinker {
       50% {
         opacity: 0;
       }
     }
-    
+
     @media screen and (max-width: 420px) and (min-height: 412px) {
       .app-container {
         display: block;
@@ -592,7 +592,7 @@
   </style>
 </head>
 <body>
-  
+
 <main class="app-container">
   <nav class="nav-bar">
     <a href="#all-video-list"><span class="nav-title"><i>Molly Little <span style="color: #4285F4;">x</span> <span style="color: #EA4335;">B</span><span style="color: #FBBC04;">B</span><span style="color: #34A853;">C</span></i></span></a>
@@ -602,7 +602,7 @@
   <section class="banner-loader">
     <div class="loader"></div>
   </section>
-  
+
   <article class="profile-container">
     <section class="profile-picture">
       <img class="profile-picture-img" src="https://pics-storage-1.pornhat.one/contents/albums/main/1920x1080/108000/108487/7112076.jpg" alt="profile-picture"/>
@@ -618,7 +618,7 @@
       </span>
     </section>
   </article>
-  
+
   <article class="profile-bio">
     <p class="profile-bio-info">Molly's captivating charm begins with her large, <span style="color: #EA4335;">mesmerizing</span> <span style="color: #FBBC04;">dark</span> <span style="color: #34A853;">eyes</span>. With just one glance, she ensnares you, leaving you utterly captivated and powerless. Slim, naturally alluring, she undoubtedly earns a top spot on your list of favorites.</p>
   </article>
@@ -630,7 +630,7 @@
     <span class="latest-video-label"><i>Latest x list!</i></span>
     <span class="latest-video-action"><i class="watch-now" onclick="handleOpenVideoFrame('molly-13')">Watch Now</i></span>
   </section>
-  
+
   <section class="popular-video">
     <span class="popular-video-title">Popular</span>
   </section>
@@ -640,13 +640,13 @@
       <span class="popular-video-action-label">Check Out Now!!</span>
     </button>
   </section>
-  
+
   <section class="featured-list">
     <span class="featured-list-title">Featured</span>
   </section>
   <marquee class="featured-list-marquee">Blacked.com <span style="color: #EA4335">x</span> BlackedRaw.com</marquee>
   <section class="featured-list-container"></section>
-  
+
   <section id="all-video-list" class="all-video-list">
     <span class="all-video-list-title gradient-span">Molly & COCO</span>
   </section>
@@ -655,16 +655,7 @@
     <button class="button-29" id="loadMore">Load More</button>
     <button class="button-29" id="loadLess" style="display: none;">Load Less</button>
   </div>
-  
-  <section id="popupContainer" class="popup-frame-container hidden">
-    <section id="videoFramePopup" class="video-frame-popup hidden">
-      <section class="video-frame-close">
-        <button id="videoFrameClose" class="video-frame-close-btn"><img width="25" height="25" src="https://img.icons8.com/fluency/48/delete-sign.png" alt="delete-sign"/></button>
-      </section>
-    <article class="video-frame-card"></article>
-  </section>
-  </section>
-  
+
   <section id="warningpopup" class="popup-frame-container">
     <section class="warning-container">
       <article class="warning-card">
@@ -673,7 +664,7 @@
           <span class="warning-title">FOR ADULTS ONLY!</span>
           <div class="warning-text">This Website is for use solely by individuals who are at least 18 years of age and have reached the age of majority or age of consent as determined by the laws of the jurisdiction from which they are accessing the Website. Accessing this Website while underage might be prohibited by law.</div>
         </div>
-        <div class="warning-browser">Recommend Browser:- <img width="15" height="15" src="https://img.icons8.com/color/48/brave-web-browser.png" alt="brave-web-browser"/> Brave</div>
+        <div class="warning-browser">Recommend Browser:- &nbsp; <img width="15" height="15" src="https://img.icons8.com/color/48/brave-web-browser.png" alt="brave-web-browser"/> Brave</div>
         <div class="warning-note">
           If you disagree with the above, click on the "Exit" button below to leave the Website.
         </div>
@@ -685,7 +676,7 @@
       </article>
     </section>
   </section>
-  
+
   <footer>
     <span>© 2025 All rights Reserved.</span>
     <span>All performers appearing on this website are 18 years or older.</span>
@@ -695,6 +686,15 @@
     <span>Powered by: <a href="https://www.blacked.com/performers/molly-little" target="_blank">Blacked.com</a> & <a href="https://www.blackedraw.com/performers/molly-little" target="_blank">BlackedRaw.com</a></span>
   </footer>
 </main>
+
+<section id="popupContainer" class="popup-frame-container hidden">
+    <section id="videoFramePopup" class="video-frame-popup hidden">
+      <section class="video-frame-close">
+        <button id="videoFrameClose" class="video-frame-close-btn"><img width="25" height="25" src="https://img.icons8.com/fluency/48/delete-sign.png" alt="delete-sign"/></button>
+      </section>
+    <article class="video-frame-card"></article>
+  </section>
+</section>
 
   <script>
     // Array of Data URLs
@@ -708,19 +708,19 @@
       'https://pics-storage-1.pornhat.one/contents/albums/main/1920x1080/105000/105893/6906965.jpg',
       'https://pics-storage-1.pornhat.one/contents/albums/main/1920x1080/145000/145378/10404950.jpg',
     ];
-    
+
     const popularimages = [
       'https://pics-storage-1.pornhat.one/contents/albums/main/1920x1080/108000/108487/7112080.jpg',
       'https://pics-storage-1.pornhat.one/contents/albums/main/1920x1080/108000/108487/7112077.jpg'
       ];
-      
+
     const featuredlist = [
       {"title": "Secret", "cover": "https://pics-storage-1.pornhat.one/contents/albums/main/1920x1080/108000/108487/7112084.jpg", "id": "molly-9"},
       {"title": "Get Passed", "cover": "https://pics-storage-1.pornhat.one/contents/albums/main/1920x1080/145000/145378/10404905.jpg", "id": "molly-11"},
       {"title": "Magic", "cover": "https://pics-storage-1.pornhat.one/contents/albums/main/1920x1080/105000/105893/6906942.jpg", "id": "molly-3"},
       {"title": "On Service", "cover": "https://pics-storage-1.pornhat.one/contents/albums/main/1920x1080/157000/157770/11508514.jpg", "id": "molly-13"},
       ];
-      
+
     const mollyvideolist = [
       {"id": "molly-13", "title": "Petite Cutie Molly Offers Special BBC Service", "cover": "https://pics-storage-1.pornhat.one/contents/albums/main/1920x1080/157000/157770/11508545.jpg", "link": "https://streamtape.com/e/KGz6gkodv0hAGv/", "duration": "41:04", "videoinfo": `Molly is a relaxation guru who helps Hollywood power players unwind. Her methods are unconventional, but ultimately her clients leave satisfied.`},
       {"id": "molly-12", "title": "Little Big Slut", "cover": "https://pics-storage-1.pornhat.com/contents/albums/main/1920x1080/132000/132012/9193663.jpg", "link": "https://streamtape.com/e/qgGwdbgvg9SYqW/", "duration": "32:45", "videoinfo": `Size doesn't matter for teeny babe, Molly Little, as she takes a massive pounding of Damion Dayski's dino-size dick deep in her throat and pussy.`},
@@ -741,7 +741,7 @@
     let popularImageIndex = 0;
     let videoListCardIndex = 0;
     const videoCardSize = 3;
-    
+
     const banner = document.getElementById('banner-image');
     const popular = document.getElementById('popular-video-banner');
     const featuredlistcontainer = document.getElementsByClassName('featured-list-container')[0];
@@ -757,11 +757,11 @@
 
     function changeBackground() {
       banner.style.backgroundImage = `url(${bannerimages[bannerImageIndex]})`;
-      
+
       popular.style.backgroundImage = `url(${popularimages[popularImageIndex]})`;
-      
+
       bannerImageIndex = (bannerImageIndex + 1) % bannerimages.length;
-      
+
       popularImageIndex = (popularImageIndex + 1) % popularimages.length;
     }
 
@@ -770,7 +770,7 @@
         return `<article class="featured-list-cover" onclick="handleOpenVideoFrame('${details?.id}')"><img class="featured-list-cover-img" src="${details?.cover}" alt="featured-list-cover" /><span class="featured-list-cover-label">${details?.title}</span></article>`}).join('');
       featuredlistcontainer.innerHTML = featuredlistcard;
     }
-    
+
     function pushVideoCard() {
       let allvideolistcard = mollyvideolist.slice(0, videoListCardIndex).map((details) => {
         return `<article class="video-cover-card" onclick="handleOpenVideoFrame('${details?.id}')"><img class="video-cover-card-img" src="${details?.cover}" alt="video-cover-card-img" /><span class="video-cover-card-title">${details?.title}</span></article>`}).join('');
@@ -783,7 +783,7 @@
         loadLessBtn.style.display = videoListCardIndex > 0 ? 'inline-block' : 'none';
       }
     }
-    
+
     function loadMore() {
       videoListCardIndex = Math.min(videoListCardIndex + videoCardSize, mollyvideolist.length);
       pushVideoCard();
@@ -795,14 +795,14 @@
     }
 
     function handleOpenVideoFrame(targetId) {
-      
+
       videoFramePopup.classList.remove('hidden');
       popupContainer.classList.remove('hidden');
-      
+
       let videoframecardelement = mollyvideolist.filter((filter) => {
         return filter.id === targetId;
       }).map((details) => {
-        return `<iframe id="video-frame" class="video-frame" src="${details?.link}" frameborder="0" allowfullscreen></iframe><section class="video-frame-details"><span class="video-frame-details-title">${details?.title}</span><span class="video-frame-details-duration">Duration: <span class="video-frame-details-time">${details?.duration}</span></span><span class="video-frame-details-info">${details?.videoinfo}</span></section>`
+        return `<iframe id="video-frame" class="video-frame" src="${details?.link}" frameborder="0" allowfullscreen></iframe><section class="video-frame-details"><span class="video-frame-details-title">${details?.title}</span><span class="video-frame-details-duration">Duration: <span class="video-frame-details-time">${details?.duration}</span></span><div class="video-frame-details-info">${details?.videoinfo}</div></section>`
       }).join('');
       videoframecard.innerHTML = videoframecardelement;
     };
@@ -812,36 +812,36 @@
       popupContainer.classList.add('hidden');
       videoframecard.innerHTML = "No Data Found!"
     };
-    
+
     function enterButton() {
       warningpopup.classList.add('hidden');
       sessionStorage.setItem('molly-little', true);
     }
-    
+
     function openGoogle() {
       window.open("https://www.google.com", "_blank");
     }
-    
+
     function warningOnload() {
       let validate = sessionStorage.getItem('molly-little');
       if(validate){
         warningpopup.classList.add('hidden');
       }
     }
-    
+
     videoListCardIndex = videoCardSize;
-    
+
     pushElement();
     pushVideoCard();
-    
+
     loadMoreBtn.addEventListener('click', loadMore);
     loadLessBtn.addEventListener('click', loadLess);
-    
+
     setInterval(changeBackground, 2000);
     changeBackground();
     warningOnload();
 
   </script>
-  
+
 </body>
 </html>
