@@ -495,7 +495,7 @@
       font-size: 2vh;
       line-break: 2px;
     }
-    
+
     .warning-vpn {
       color: #DAF7A6;
       font-size: 2vh;
@@ -511,7 +511,7 @@
       display: flex;
       align-items: center;
     }
-    
+
     .warning-browser-name {
       color: #FF5733;
       font-size: 2vh;
@@ -614,6 +614,47 @@
 
     .link-icon {
       width: 10px;
+    }
+    
+    .addvtaisment-list {
+      border-top: 0.5vh solid white;
+      border-bottom: 0.5vh solid white;
+      display: flex;
+      justify-content: center;
+      margin: 4vh 0 0 0;
+    }
+
+    .addvtaisment-list-title {
+      color: white;
+      font-size: 5vh;
+      font-weight: 800;
+    }
+    
+    .addvtaisment-marquee {
+      width: 100vw;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .addvtaisment-marquee-content {
+      display: inline-flex;
+      white-space: nowrap;
+      animation: scroll-banner 30s linear infinite;
+    }
+
+    .addvtaisment-marquee-content img {
+      height: auto;
+      max-height: 320px;
+    }
+
+    @keyframes scroll-banner {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
 
     footer {
@@ -719,6 +760,13 @@
     <button class="button-29" id="loadMore">Load More</button>
     <button class="button-29" id="loadLess" style="display: none;">Load Less</button>
   </div>
+  
+  <section class="addvtaisment-list">
+    <span class="addvtaisment-list-title">Addvtaisment</span>
+  </section>
+  <section class="addvtaisment-marquee">
+    <article id="addvtaisment-marquee-content" class="addvtaisment-marquee-content"></article>
+  </section>
 
   <section id="warningpopup" class="popup-frame-container">
     <section class="warning-container">
@@ -819,6 +867,7 @@
     let popularImageIndex = 0;
     let videoListCardIndex = 0;
     const videoCardSize = 3;
+    let addvtaismentArray = [1,2];
 
     const today = new Date();
     const date = today.getDate();
@@ -830,6 +879,7 @@
     const banner = document.getElementById('banner-image');
     const popular = document.getElementById('popular-video-banner');
     const featuredlistcontainer = document.getElementsByClassName('featured-list-container')[0];
+    const addvtaismentmarquee = document.getElementsByClassName('addvtaisment-marquee-content')[0];
     const allvideolistcontainer = document.getElementsByClassName('all-video-container')[0];
     const popupContainer = document.getElementById('popupContainer');
     const warningpopup = document.getElementById('warningpopup');
@@ -841,6 +891,10 @@
     const loadLessBtn = document.getElementById('loadLess');
     const warningPopupDate = document.getElementById('warning-date');
     const copyrightYear = document.getElementById('copyright-year');
+    
+    function shuffle(array) {
+      return array.map(value => ({ value, sort: Math.random() })).sort((a, b) => a.sort - b.sort).map(({ value }) => value);
+    }
 
     function changeBackground() {
       banner.style.backgroundImage = `url(${bannerimages[bannerImageIndex]})`;
@@ -856,6 +910,10 @@
       let featuredlistcard = featuredlist.map((details) => {
         return `<article class="featured-list-cover" onclick="handleOpenVideoFrame('${details?.id}')"><img class="featured-list-cover-img" src="${details?.cover}" alt="featured-list-cover" /><span class="featured-list-cover-label">${details?.title}</span></article>`}).join('');
       featuredlistcontainer.innerHTML = featuredlistcard;
+      let addvtaismentImg = shuffle(addvtaismentArray).map((details) => {
+        return `<img src="https://vlog-x.github.io/mydatabase/banner-${details}.jpg" alt="Scrolling Image"/>`
+      }).join('');
+      addvtaismentmarquee.innerHTML = addvtaismentImg;
       copyrightYear.innerHTML = `${year}`;
       warningPopupDate.innerHTML = `Date: ${monthName + " " + date + ", " + year}`
     }
@@ -930,6 +988,24 @@
     changeBackground();
     warningOnload();
 
+  </script>
+  
+  <script>
+    const marqueeContent = document.getElementById("addvtaisment-marquee-content");
+    const img = marqueeContent.querySelector("img");
+
+    img.onload = () => {
+      const marqueeWidth = marqueeContent.parentElement.offsetWidth;
+      const imgWidth = img.width;
+
+      // how many times to duplicate to cover at least 2x container width
+      const repeatCount = Math.ceil((marqueeWidth * 2) / imgWidth);
+
+      for (let i = 0; i < repeatCount; i++) {
+        const clone = img.cloneNode(true);
+        marqueeContent.appendChild(clone);
+      }
+    };
   </script>
 
 </body>
