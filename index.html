@@ -615,8 +615,8 @@
     .link-icon {
       width: 10px;
     }
-    
-    .addvtaisment-list {
+
+    .advertisement-list {
       border-top: 0.5vh solid white;
       border-bottom: 0.5vh solid white;
       display: flex;
@@ -624,23 +624,23 @@
       margin: 4vh 0 0 0;
     }
 
-    .addvtaisment-list-title {
+    .advertisement-list-title {
       color: white;
       font-size: 5vh;
       font-weight: 800;
     }
-    
-    .addvtaisment-marquee {
+
+    .advertisement-marquee {
       width: 100vw;
       overflow: hidden;
     }
 
-    .addvtaisment-marquee-content {
+    .advertisement-marquee-content {
       display: inline-flex;
       animation: scroll-banner 30s linear infinite;
     }
 
-    .addvtaisment-marquee-content img {
+    .advertisement-marquee-content img {
       height: auto;
       max-height: 320px;
     }
@@ -757,12 +757,12 @@
     <button class="button-29" id="loadMore">Load More</button>
     <button class="button-29" id="loadLess" style="display: none;">Load Less</button>
   </div>
-  
-  <section class="addvtaisment-list">
-    <span class="addvtaisment-list-title">Addvtaisment</span>
+
+  <section class="advertisement-list">
+    <span class="advertisement-list-title">Advertisement</span>
   </section>
-  <section class="addvtaisment-marquee">
-    <article id="addvtaisment-marquee-content" class="addvtaisment-marquee-content"></article>
+  <section class="advertisement-marquee">
+    <article id="advertisement-marquee-content" class="advertisement-marquee-content"></article>
   </section>
 
   <section id="warningpopup" class="popup-frame-container">
@@ -864,7 +864,7 @@
     let popularImageIndex = 0;
     let videoListCardIndex = 0;
     const videoCardSize = 3;
-    let addvtaismentArray = [1,2];
+    let advertisementArray = Array.from({ length: 3 }, (_, i) => i + 1);
 
     const today = new Date();
     const date = today.getDate();
@@ -876,7 +876,7 @@
     const banner = document.getElementById('banner-image');
     const popular = document.getElementById('popular-video-banner');
     const featuredlistcontainer = document.getElementsByClassName('featured-list-container')[0];
-    const addvtaismentmarquee = document.getElementsByClassName('addvtaisment-marquee-content')[0];
+    const advertisementmarquee = document.getElementsByClassName('advertisement-marquee-content')[0];
     const allvideolistcontainer = document.getElementsByClassName('all-video-container')[0];
     const popupContainer = document.getElementById('popupContainer');
     const warningpopup = document.getElementById('warningpopup');
@@ -888,7 +888,7 @@
     const loadLessBtn = document.getElementById('loadLess');
     const warningPopupDate = document.getElementById('warning-date');
     const copyrightYear = document.getElementById('copyright-year');
-    
+
     function shuffle(array) {
       return array.map(value => ({ value, sort: Math.random() })).sort((a, b) => a.sort - b.sort).map(({ value }) => value);
     }
@@ -907,10 +907,10 @@
       let featuredlistcard = featuredlist.map((details) => {
         return `<article class="featured-list-cover" onclick="handleOpenVideoFrame('${details?.id}')"><img class="featured-list-cover-img" src="${details?.cover}" alt="featured-list-cover" /><span class="featured-list-cover-label">${details?.title}</span></article>`}).join('');
       featuredlistcontainer.innerHTML = featuredlistcard;
-      let addvtaismentImg = shuffle(addvtaismentArray).map((details) => {
+      let advertisementImg = shuffle(advertisementArray).map((details) => {
         return `<img src="https://vlog-x.github.io/mydatabase/banner-${details}.jpg" alt="Scrolling Image"/>`
       }).join('');
-      addvtaismentmarquee.innerHTML = addvtaismentImg;
+      advertisementmarquee.innerHTML = advertisementImg;
       copyrightYear.innerHTML = `${year}`;
       warningPopupDate.innerHTML = `Date: ${monthName + " " + date + ", " + year}`
     }
