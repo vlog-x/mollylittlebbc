@@ -633,13 +633,10 @@
     .addvtaisment-marquee {
       width: 100vw;
       overflow: hidden;
-      white-space: nowrap;
-      position: relative;
     }
 
     .addvtaisment-marquee-content {
       display: inline-flex;
-      white-space: nowrap;
       animation: scroll-banner 30s linear infinite;
     }
 
@@ -988,24 +985,6 @@
     changeBackground();
     warningOnload();
 
-  </script>
-  
-  <script>
-    const marqueeContent = document.getElementById("addvtaisment-marquee-content");
-    const img = marqueeContent.querySelector("img");
-
-    img.onload = () => {
-      const marqueeWidth = marqueeContent.parentElement.offsetWidth;
-      const imgWidth = img.width;
-
-      // how many times to duplicate to cover at least 2x container width
-      const repeatCount = Math.ceil((marqueeWidth * 2) / imgWidth);
-
-      for (let i = 0; i < repeatCount; i++) {
-        const clone = img.cloneNode(true);
-        marqueeContent.appendChild(clone);
-      }
-    };
   </script>
 
 </body>
